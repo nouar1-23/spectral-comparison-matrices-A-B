@@ -14,7 +14,7 @@ function [] = plo()
 
     % ----- Построение графиков -----
     figure
-    plot(e1, log10(m1), 'blue', 'LineWidth', 2.3); hold on; %график спектральных портретов методом итерационных уточнений
+    plot(e1, log10(m1), 'blue', 'LineWidth', 2.3); hold on; %график спектральных портретов комбинированным методом
     plot(e1, log10(m2), 'red', 'LineWidth', 1.4); %график спектральных портретов методом Малышева
     xlabel('r');
     ylabel('$\log_{10} \| H \|$', 'Interpreter', 'latex');
@@ -24,7 +24,7 @@ function [] = plo()
 
 
     figure
-    plot(e1, log10(m3), 'blue', 'LineWidth', 2.3); hold on; %график точности решения методом итерационных уточнений
+    plot(e1, log10(m3), 'blue', 'LineWidth', 2.3); hold on; %график точности решения комбинированным методом
     plot(e1, log10(m4), 'red', 'LineWidth', 1.4); %график точности решения методом Малышева
     xlabel('r');
     ylabel('$\log_{10} \| H_j - H_{j-1} \|$', 'Interpreter', 'latex');
