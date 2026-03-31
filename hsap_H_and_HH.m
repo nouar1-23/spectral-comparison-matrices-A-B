@@ -43,7 +43,7 @@ function [e1,m1,m2,m3,m4,s1,s2,s3] = hsap_H_and_HH(a,b,A)
             l  = 1;       % Устанавливаем флаг, что проектор в работе
             
             % Внутренний цикл вычисления проектора
-            while max(abs(p^2 - p), [], 'all') > ip * max(abs(p), [], 'all') && d <= m0/3 
+            while max(abs(p^2 - p), [], 'all') > ip  && d <= m0/3 
                 d = d + 1;
                 for i1 = 1:3
                     S_temp = [-B0; A0];
@@ -180,7 +180,7 @@ function [e1,m1,m2,m3,m4,s1,s2,s3] = hsap_H_and_HH(a,b,A)
         d  = 0;
         
         % Внутренний цикл уточнения проектора
-        while (max(abs(p * p - p), [], 'all') > ip * max(abs(p), [], 'all') && d <= m0/3 )
+        while (max(abs(p * p - p), [], 'all') > ip  && d <= m0/3 )
             d = d + 1;
             for i1 = 1:3
                 S_temp = [-B0; A0];
